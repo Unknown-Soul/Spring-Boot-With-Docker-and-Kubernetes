@@ -1,7 +1,9 @@
 package com.springUdemyCourse.OrderService.service;
 
 import com.springUdemyCourse.OrderService.co.OrderCO;
+import com.springUdemyCourse.OrderService.external.client.PaymentService;
 import com.springUdemyCourse.OrderService.external.client.ProductService;
+import com.springUdemyCourse.OrderService.external.co.PaymentCO;
 import com.springUdemyCourse.OrderService.helpers.OrderStatus;
 import com.springUdemyCourse.OrderService.model.Orders;
 import com.springUdemyCourse.OrderService.repository.OrderRepository;
@@ -22,11 +24,15 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     ProductService productService;
 
+
+    @Autowired
+    PaymentService paymentService;
+
     @Override
     public Long placeOrder(OrderCO orderCO) {
-        log.info("Placing order of {}", orderCO);
+        log.info("Placing order of {} by calling productService", orderCO);
         // Check Product Exist from Product MicroService and reduce quantity it exists
-        productService.reduceQuantity(orderCO.getProductId(),orderCO.getQuantity());
+        productService.reduceQuantity(orderCO.getProductId(), orderCO.getQuantity());
 
         // Order Object Creation
         Orders order = Orders.builder()
@@ -42,6 +48,21 @@ public class OrderServiceImpl implements OrderService {
         log.info("Order {} place successfully", orderCO);
 
         // Payment Service : if success->complete else cancel
+        log.info("Making Payment {} By Calling PaymentService", orderCO);
+        PaymentCO paymentCO = PaymentCO.builder()
+                .paymentMode(orderCO.getPaymentMode())
+                .orderId(order.getId())
+                .amount(order.getAmount()).build();
+        try {
+            paymentService.doPayment(paymentCO);
+            order.setOrderStatus(OrderStatus.CREATED);
+            log.info("Order  placed successfully");
+        } catch (Exception e) {
+            log.info("Order cancelled because {}", e.getMessage());
+            order.setOrderStatus(OrderStatus.CANCELLED);
+        }
+        orderRepository.saveAndFlush(order);
+
         return orderCreated.getId();
     }
 }
