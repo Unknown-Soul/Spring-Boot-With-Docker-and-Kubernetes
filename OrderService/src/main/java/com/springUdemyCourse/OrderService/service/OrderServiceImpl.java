@@ -1,6 +1,8 @@
 package com.springUdemyCourse.OrderService.service;
 
 import com.springUdemyCourse.OrderService.co.OrderCO;
+import com.springUdemyCourse.OrderService.dto.OrderDTO;
+import com.springUdemyCourse.OrderService.exception.CustomException;
 import com.springUdemyCourse.OrderService.external.client.PaymentService;
 import com.springUdemyCourse.OrderService.external.client.ProductService;
 import com.springUdemyCourse.OrderService.external.co.PaymentCO;
@@ -64,5 +66,17 @@ public class OrderServiceImpl implements OrderService {
         orderRepository.saveAndFlush(order);
 
         return orderCreated.getId();
+    }
+
+    @Override
+    public OrderDTO getOrderDetails(Long orderId) {
+        Orders orders  = orderRepository.findById(orderId).orElseThrow(()->new CustomException("Invalid Requst","INVALID_ORDER_ID",403));
+        if(orders!=null){
+            return new OrderDTO().builder().orderId(orders.getId())
+                    .amount(orders.getAmount())
+                    .orderStatus(orders.getOrderStatus().name()).orderDate(orders.getOrderDate()).build();
+        }else{
+            throw new CustomException("Invalid Requst","INVALID_ORDER_ID",403);
+        }
     }
 }
