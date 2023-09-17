@@ -1,20 +1,18 @@
 package com.springUdemyCourse.OrderService.dto;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.Instant;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class OrderDTO {
-    private  long orderId;
-    private Instant orderDate;
-    private String orderStatus;
-    private long amount;
-    private ProductDTO productDTO;
+public class ProductDTO {
+    private long id;
+    private String name;
+    private long price;
+//    private long quantity;
 }

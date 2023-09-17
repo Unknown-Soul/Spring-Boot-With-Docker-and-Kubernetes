@@ -2,6 +2,7 @@ package com.springUdemyCourse.OrderService.service;
 
 import com.springUdemyCourse.OrderService.co.OrderCO;
 import com.springUdemyCourse.OrderService.dto.OrderDTO;
+import com.springUdemyCourse.OrderService.dto.ProductDTO;
 import com.springUdemyCourse.OrderService.exception.CustomException;
 import com.springUdemyCourse.OrderService.external.client.PaymentService;
 import com.springUdemyCourse.OrderService.external.client.ProductService;
@@ -12,6 +13,7 @@ import com.springUdemyCourse.OrderService.repository.OrderRepository;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -71,9 +73,12 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDTO getOrderDetails(Long orderId) {
         Orders orders  = orderRepository.findById(orderId).orElseThrow(()->new CustomException("Invalid Requst","INVALID_ORDER_ID",403));
+
         if(orders!=null){
+            ResponseEntity<ProductDTO> productDTO = productService.getProduct(orders.getProductId());
             return new OrderDTO().builder().orderId(orders.getId())
                     .amount(orders.getAmount())
+                    .productDTO(productDTO.getBody())
                     .orderStatus(orders.getOrderStatus().name()).orderDate(orders.getOrderDate()).build();
         }else{
             throw new CustomException("Invalid Requst","INVALID_ORDER_ID",403);

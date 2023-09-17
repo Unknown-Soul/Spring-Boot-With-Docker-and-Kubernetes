@@ -25,7 +25,7 @@ public class ProductController {
 
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
-    public ResponseEntity<ProductDTO> addProduct(@PathVariable long id){
+    public ResponseEntity<ProductDTO> getProduct(@PathVariable long id){
         ProductDTO productDTO = productService.getProduct(id);
         return  new ResponseEntity<>(productDTO, HttpStatus.OK);
     }
