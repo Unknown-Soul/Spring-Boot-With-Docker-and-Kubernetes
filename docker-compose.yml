@@ -1,8 +1,13 @@
-version: '3'
+"version": '3'
 services:
   serviceregistry:
     image: 'udemycourse/serviceregistory:0.0.1'
     container_name: serviceregistry
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9296/actuator/health" ]
+      interval: 10s
+      timeout: 40s
+      retries: 10
     ports:
       - '8761:8761'
 
@@ -11,15 +16,18 @@ services:
     container_name: configserver
     ports:
       - '9296:9296'
+    depends_on:
+      serviceregistry:
+        condition: service_healthy
     environment:
-      - EUREKA_SERVER_ADDRESS=serviceregistry
+      - EUREKA_SERVER_ADDRESS=http://serviceregistry:8761
     links:
       - serviceregistry
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:9296/actuator/health" ]
       interval: 10s
-      timeout: 60s
-      retries: 15
+      timeout: 40s
+      retries: 10
     depends_on:
       - serviceregistry
 
@@ -32,5 +40,5 @@ services:
       configserver:
         condition: service_healthy
     environment:
-      - EUREKA_SERVER_ADDRESS=serviceregistry
+      - EUREKA_SERVER_ADDRESS=http://serviceregistry:8761
       - CONFIG_SERVER_URL=configserver
