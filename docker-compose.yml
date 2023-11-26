@@ -1,0 +1,36 @@
+version: '3'
+services:
+  serviceregistry:
+    image: 'udemycourse/serviceregistory:0.0.1'
+    container_name: serviceregistry
+    ports:
+      - '8761:8761'
+
+  configserver:
+    image: 'udemycourse/configserver:0.0.1'
+    container_name: configserver
+    ports:
+      - '9296:9296'
+    environment:
+      - EUREKA_SERVER_ADDRESS=serviceregistry
+    links:
+      - serviceregistry
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9296/actuator/health" ]
+      interval: 10s
+      timeout: 60s
+      retries: 15
+    depends_on:
+      - serviceregistry
+
+  cloudgateway:
+    image: 'udemycourse/cloudgateway:0.0.1'
+    container_name: cloudgateway
+    ports:
+      - '9090:9090'
+    depends_on:
+      configserver:
+        condition: service_healthy
+    environment:
+      - EUREKA_SERVER_ADDRESS=serviceregistry
+      - CONFIG_SERVER_URL=configserver

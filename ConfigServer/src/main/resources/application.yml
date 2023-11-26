@@ -9,4 +9,4 @@ spring:
       server:
         git:
           uri: https://github.com/Unknown-Soul/SpringAppConfig.git
-          clone-on-start: true 
+          clone-on-start: true

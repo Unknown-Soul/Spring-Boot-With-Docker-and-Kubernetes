@@ -4,7 +4,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:http://${CONFIG_SERVER_URL:localhost}:9296
   cloud:
     gateway:
       routes:
@@ -13,10 +13,10 @@ spring:
           predicates:
             - Path=/order/**
           filters:
-              - name: CircuitBreaker
-                args:
-                  name: ORDER-SERVICE
-                  fallbackuri: forward:/orderServiceFallBack
+            - name: CircuitBreaker
+              args:
+                name: ORDER-SERVICE
+                fallbackuri: forward:/orderServiceFallBack
         - id: PRODUCT-SERVICE
           uri: lb://PRODUCT-SERVICE
           predicates:
@@ -26,4 +26,3 @@ spring:
               args:
                 name: PRODUCT-SERVICE
                 fallbackuri: forward:/productServiceFallBack
-
