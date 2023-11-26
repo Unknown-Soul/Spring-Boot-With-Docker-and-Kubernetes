@@ -3,11 +3,6 @@ services:
   serviceregistry:
     image: 'udemycourse/serviceregistory:0.0.1'
     container_name: serviceregistry
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:9296/actuator/health" ]
-      interval: 10s
-      timeout: 40s
-      retries: 10
     ports:
       - '8761:8761'
 
@@ -17,19 +12,16 @@ services:
     ports:
       - '9296:9296'
     depends_on:
-      serviceregistry:
-        condition: service_healthy
+      - serviceregistry
     environment:
-      - EUREKA_SERVER_ADDRESS=http://serviceregistry:8761
+      - eureka.client.service-url.defaultZone=http://serviceregistry:8761/eureka
     links:
       - serviceregistry
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:9296/actuator/health" ]
       interval: 10s
-      timeout: 40s
+      timeout: 60s
       retries: 10
-    depends_on:
-      - serviceregistry
 
   cloudgateway:
     image: 'udemycourse/cloudgateway:0.0.1'
