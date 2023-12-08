@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-registory
+spec:
+  selector:
+    matchLabels:
+      app: service-registory
+  template:
+    metadata:
+      labels:
+        app: service-registory
+    spec:
+      containers:
+        - name:  service-registory
+          image:  udemycourse/serviceregistory:0.0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8761
