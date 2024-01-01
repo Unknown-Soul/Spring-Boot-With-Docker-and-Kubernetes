@@ -1,0 +1,215 @@
+2023-12-25 01:40:31.376 [info] Extension host with pid 1043782 started
+2023-12-25 01:40:31.376 [info] Skipping acquiring lock for /home/ashutosh/Documents/Projects/microserviceCource/User/workspaceStorage/614f98f7a7ddf9559d36327fc6da011a.
+2023-12-25 01:40:31.974 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-12-25 01:40:32.028 [info] ExtensionService#_doActivateExtension redhat.vscode-yaml, startup: false, activationEvent: 'onLanguage:yaml', root cause: ms-kubernetes-tools.vscode-kubernetes-tools
+2023-12-25 01:40:32.786 [info] ExtensionService#_doActivateExtension ms-kubernetes-tools.vscode-kubernetes-tools, startup: false, activationEvent: 'onLanguage:yaml'
+2023-12-25 01:40:33.866 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-12-25 01:40:34.246 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-12-25 01:40:34.262 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-12-25 01:40:34.425 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-12-25 01:40:34.454 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-12-25 01:40:34.683 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-12-25 01:40:35.162 [info] Eager extensions activated
+2023-12-25 01:40:35.354 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-12-25 01:40:35.362 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-12-25 01:40:35.703 [warning] [Decorations] CAPPING events from decorations provider vscode.git 441
+2023-12-25 01:40:36.158 [warning] [Decorations] CAPPING events from decorations provider vscode.git 441
+2023-12-25 01:44:24.401 [warning] [Decorations] CAPPING events from decorations provider vscode.git 544
+2023-12-25 01:44:29.519 [warning] [Decorations] CAPPING events from decorations provider vscode.git 533
+2023-12-25 01:44:39.250 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-12-25 01:44:39.389 [warning] [redhat.vscode-yaml] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for '[yaml]', provide the URI of a resource or 'null' for any resource.
+2023-12-25 01:44:39.455 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2023-12-25 01:44:46.919 [warning] [Decorations] CAPPING events from decorations provider vscode.git 551
+2023-12-25 01:44:51.997 [warning] [Decorations] CAPPING events from decorations provider vscode.git 553
+2023-12-25 01:44:57.104 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:02.212 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:07.304 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:12.422 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:17.528 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:22.615 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:27.704 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:32.793 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:37.892 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:42.988 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:48.076 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:53.189 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:45:58.315 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:46:03.412 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:46:31.748 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:46:36.833 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:46:41.942 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:46:47.059 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:47:21.513 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:47:28.947 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:50:24.174 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:50:34.246 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:50:39.343 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:50:45.510 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:52:24.381 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:15.168 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:20.334 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:25.435 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:32.511 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:37.584 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:53:42.658 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:57:19.479 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:57:24.562 [warning] [Decorations] CAPPING events from decorations provider vscode.git 554
+2023-12-25 01:57:29.635 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:57:34.748 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:57:39.838 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:57:46.270 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:57:53.954 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:58:01.371 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:58:06.533 [warning] [Decorations] CAPPING events from decorations provider vscode.git 555
+2023-12-25 01:58:11.695 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:58:18.351 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:58:23.455 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:58:35.721 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:58:57.964 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:03.081 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:15.819 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 01:59:20.900 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:26.018 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:31.160 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:36.596 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:41.765 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:46.916 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:52.085 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 01:59:57.189 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:02.314 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:07.463 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:12.609 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:17.750 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:22.899 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:00:28.016 [warning] [Decorations] CAPPING events from decorations provider vscode.git 556
+2023-12-25 02:11:11.317 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:16.457 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:31.229 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:36.300 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:41.433 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:49.795 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:11:54.915 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:00.023 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:08.838 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:13.949 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:29.386 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:35.870 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:41.711 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:46.810 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:51.933 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:12:57.018 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:02.138 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:07.261 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:12.370 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:17.475 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:40.011 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:46.903 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:13:51.978 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:01.738 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:06.966 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:12.049 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:17.220 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:25.953 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:33.978 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:41.470 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:46.574 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:51.683 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:14:57.386 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:15:02.485 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:15:07.570 [warning] [Decorations] CAPPING events from decorations provider vscode.git 557
+2023-12-25 02:15:13.144 [warning] [Decorations] CAPPING events from decorations provider vscode.git 558
+2023-12-25 02:16:11.726 [warning] [Decorations] CAPPING events from decorations provider vscode.git 558
+2023-12-25 02:16:16.821 [warning] [Decorations] CAPPING events from decorations provider vscode.git 558
+2023-12-25 02:16:21.915 [warning] [Decorations] CAPPING events from decorations provider vscode.git 559
+2023-12-25 02:16:27.008 [warning] [Decorations] CAPPING events from decorations provider vscode.git 559
+2023-12-25 02:16:32.127 [warning] [Decorations] CAPPING events from decorations provider vscode.git 559
+2023-12-25 02:16:37.231 [warning] [Decorations] CAPPING events from decorations provider vscode.git 559
+2023-12-25 02:16:45.091 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:16:50.204 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:16:55.286 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:17:08.634 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:17:13.744 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:17:18.910 [warning] [Decorations] CAPPING events from decorations provider vscode.git 560
+2023-12-25 02:17:23.982 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:17:29.069 [warning] [Decorations] CAPPING events from decorations provider vscode.git 561
+2023-12-25 02:17:34.157 [warning] [Decorations] CAPPING events from decorations provider vscode.git 561
+2023-12-25 02:17:39.257 [warning] [Decorations] CAPPING events from decorations provider vscode.git 561
+2023-12-25 02:18:27.425 [warning] [Decorations] CAPPING events from decorations provider vscode.git 561
+2023-12-25 02:56:05.534 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:10.607 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:15.710 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:20.831 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:25.955 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:31.040 [warning] [Decorations] CAPPING events from decorations provider vscode.git 562
+2023-12-25 02:56:34.932 [info] Extension host terminating: renderer closed the MessagePort
+2023-12-25 02:56:35.024 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at f.I [as value] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:924696)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2023-12-25 02:56:35.026 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at set b [as b] (/usr/share/code/resources/app/extensions/github/dist/extension.js:2:322364)
+	at /usr/share/code/resources/app/extensions/github/dist/extension.js:2:323005
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2023-12-25 02:56:35.030 [info] Extension host with pid 1043782 exiting with code 0

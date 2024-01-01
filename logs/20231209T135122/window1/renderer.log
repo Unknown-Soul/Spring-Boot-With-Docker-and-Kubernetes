@@ -1,0 +1,7 @@
+2023-12-09 13:51:31.024 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-12-09 13:51:31.056 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'terminalContextMenu' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2023-12-09 13:51:32.128 [info] Started initializing default profile extensions in extensions installation folder. file:///root/.vscode/extensions
+2023-12-09 13:51:32.674 [info] Completed initializing default profile extensions in extensions installation folder. file:///root/.vscode/extensions
+2023-12-09 13:51:35.833 [info] [perf] Render performance baseline is 79ms
+2023-12-09 13:53:59.810 [error] [Extension Host] (node:31951) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)

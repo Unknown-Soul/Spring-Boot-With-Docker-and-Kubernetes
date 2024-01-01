@@ -1,0 +1,9 @@
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: eureka-config-map
+  namespace: default
+data:
+  eureka_service_address: "http://eureka-0.eureka:8761/eureka"
+---

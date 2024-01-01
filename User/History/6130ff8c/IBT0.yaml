@@ -1,0 +1,61 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: eureka
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: eureka # has to match .spec.template.metadata.labels
+  serviceName: "eureka"
+  replicas: 1 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: eureka # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: eureka
+        image: udemycourse/serviceregistory
+        ports:
+        - containerPort: 8761
+---
+
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: eureka
+  namespace: default
+spec:
+  ClusterIP: None    # setting is none make it a healess service
+  selector:
+    app: eureka
+  type: ClusterIP
+  ports:
+  - name: eureka
+    protocol: TCP
+    port: 8761
+---
+
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: eureka-lb
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: eureka
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8761
+---
+
+
+
+
