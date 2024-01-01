@@ -1,0 +1,112 @@
+# PV - persitant valoume
+# PVC -  persitnat volume clain
+# StatefulSet - mysql
+# headless-service
+# config
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  hostPath:
+    path: "/mnt/data"
+    type: DirectoryOrCreate
+---
+# https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+spec:
+  # AKS: default,managed-premium
+  # GKE: standard
+  # EKS: gp2 (custom)
+  # Rook: rook-ceph-block,rook-ceph-fs
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+---
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: mysql # has to match .spec.template.metadata.labels
+  serviceName: "mysql"
+  replicas: 1 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: mysql # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mysql
+        image: mysql:8.0
+        ports:
+        - containerPort: 3306
+          name: mysql
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: root
+        volumeMounts:
+        - name: mysql-initdb
+          mountPath: /docker-entrypoint-initdb.d # mount intita mysql script
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+  volume: 
+    - name: mysql-persistent-storage
+      persistentVolumeClaim:
+        claimName: mysql-pvc
+    - name: mysql-initdb
+      configMap:
+        name: mysql-initdb-cm
+      
+---
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mysql-initdb-cm
+data:
+  init.sql: |
+    CREATE DATABASE IF NOT EXISTS orderdb;
+    CREATE DATABASE IF NOT EXISTS payementdb;
+    CREATE DATABASE IF NOT EXISTS productdb;
+
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  ClusterIP: None
+  selector:
+    app: mysql
+  ports:
+  - port: 3306
+---
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: mysql-cm
+data:
+  hostname: "mysql-0.mysql"
+---

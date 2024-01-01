@@ -31,16 +31,21 @@ spec:
         ports:
         - containerPort: 8081
         env:
-        - name: EUREKA_SERVER_ADDRESS
-          valueFrom:
-            configMapKeyRef:
-              key: eureka_service_address
-              name: eureka-cm
-        - name: CONFIG_SERVER_URL
-          valueFrom:
-            configMapKeyRef:
-              key: config_url
-              name: eureka-cm
+          - name: EUREKA_SERVER_ADDRESS
+            valueFrom:
+              configMapKeyRef:
+                key: eureka_service_address
+                name: eureka-cm
+          - name: CONFIG_SERVER_URL
+            valueFrom:
+              configMapKeyRef:
+                key: config_url
+                name: eureka-cm
+          - name: DB_HOST
+            valueFrom:
+              configMapKeyRef:
+                key: hostname
+                name: mysql-cm
 ---
 # https://kubernetes.io/docs/concepts/services-networking/service/
 apiVersion: v1
