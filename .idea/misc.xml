@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/CloudGateway" />
     <file type="web" url="file://$PROJECT_DIR$/ConfigServer" />
     <file type="web" url="file://$PROJECT_DIR$/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/ProductService" />
     <file type="web" url="file://$PROJECT_DIR$/ServiceRegistry" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="jbr-11" project-jdk-type="JavaSDK" />
