@@ -27,7 +27,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name: order-service-app
-        image: udemycourse/orderservice
+        image: 123joker/orderservice:0.0.1
         ports:
         - containerPort: 8082
         env:
@@ -40,7 +40,7 @@ spec:
             valueFrom:
               configMapKeyRef:
                 key: config_url
-                name: eureka-cm
+                name: config-cm
           - name: DB_HOST
             valueFrom:
               configMapKeyRef:

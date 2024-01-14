@@ -1,5 +1,5 @@
-# PV - persitant valoume
-# PVC -  persitnat volume clain
+# PV - persistent volume
+# PVC - persistent volume claim
 # StatefulSet - mysql
 # headless-service
 # config
@@ -25,10 +25,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: mysql-pvc
 spec:
-  # AKS: default,managed-premium
-  # GKE: standard
-  # EKS: gp2 (custom)
-  # Rook: rook-ceph-block,rook-ceph-fs
   resources:
     requests:
       storage: 1Gi
@@ -46,13 +42,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mysql # has to match .spec.template.metadata.labels
+      app: mysql
   serviceName: "mysql"
-  replicas: 1 # by default is 1
+  replicas: 1
   template:
     metadata:
       labels:
-        app: mysql # has to match .spec.selector.matchLabels
+        app: mysql
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -65,18 +61,20 @@ spec:
           - name: MYSQL_ROOT_PASSWORD
             value: root
         volumeMounts:
-        - name: mysql-initdb
-          mountPath: /docker-entrypoint-initdb.d # mount intita mysql script
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
-  volume: 
-    - name: mysql-persistent-storage
-      persistentVolumeClaim:
-        claimName: mysql-pvc
-    - name: mysql-initdb
-      configMap:
-        name: mysql-initdb-cm
-      
+        - name: mysql-initdb
+          mountPath: /docker-entrypoint-initdb.d
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-persistent-storage # Added correct metadata name
+    spec:
+      resources:
+        requests:
+          storage: 1Gi
+      storageClassName: manual # Specify the correct storageClassName
+      accessModes:
+        - ReadWriteOnce
 ---
 # https://kubernetes.io/docs/concepts/configuration/configmap/
 kind: ConfigMap
@@ -86,7 +84,7 @@ metadata:
 data:
   init.sql: |
     CREATE DATABASE IF NOT EXISTS orderdb;
-    CREATE DATABASE IF NOT EXISTS payementdb;
+    CREATE DATABASE IF NOT EXISTS paymentdb;
     CREATE DATABASE IF NOT EXISTS productdb;
 
 ---
@@ -96,7 +94,7 @@ kind: Service
 metadata:
   name: mysql
 spec:
-  ClusterIP: None
+  clusterIP: None
   selector:
     app: mysql
   ports:
@@ -109,4 +107,3 @@ metadata:
   name: mysql-cm
 data:
   hostname: "mysql-0.mysql"
----

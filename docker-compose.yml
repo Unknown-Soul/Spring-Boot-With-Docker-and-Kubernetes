@@ -1,13 +1,13 @@
 "version": '3'
 services:
   serviceregistry:
-    image: 'udemycourse/serviceregistory:0.0.1'
+    image: '123joker/serviceregistory:0.0.1'
     container_name: serviceregistry
     ports:
       - '8761:8761'
 
   configserver:
-    image: 'udemycourse/configserver:0.0.1'
+    image: '123joker/configserver:0.0.1'
     container_name: configserver
     ports:
       - '9296:9296'
@@ -24,7 +24,7 @@ services:
       retries: 10
 
   cloudgateway:
-    image: 'udemycourse/cloudgateway:0.0.1'
+    image: '123joker/cloudgateway:0.0.1'
     container_name: cloudgateway
     ports:
       - '9090:9090'

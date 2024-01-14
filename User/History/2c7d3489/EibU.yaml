@@ -27,7 +27,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name: config-server-app
-        image: udemycourse/configserver
+        image: 123joker/configserver:0.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9296

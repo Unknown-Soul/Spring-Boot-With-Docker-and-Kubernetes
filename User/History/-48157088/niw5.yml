@@ -27,7 +27,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name: cloud-gateway-app
-        image: udemycourse/cloudgateway
+        image: 123joker/cloudgateway:0.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9090

@@ -21,29 +21,19 @@ spec:
       labels:
         app: config-server-app
     spec:
-      # initContainers:
-        # Init containers are exactly like regular containers, except:
-          # - Init containers always run to completion.
-          # - Each init container must complete successfully before the next one starts.
       containers:
       - name: config-server-app
-        image: udemycourse/configserver
-        imagePullPolicy: IfNotPresent
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 100m
-            memory: 100Mi
+        image: 123joker/configserver:0.0.1
+        imagePullPolicy: Always
         ports:
-          - containerPort: 9296
+        - containerPort: 9296
         env:
           - name: EUREKA_SERVER_ADDRESS
             valueFrom:
               configMapKeyRef:
-                key: eureka_service_address
                 name: eureka-cm
+                key: eureka_service_address
+                
 ---
 
 # https://kubernetes.io/docs/concepts/services-networking/service/
@@ -57,8 +47,7 @@ spec:
     app: config-server-app
   type: ClusterIP
   ports:
-  - name: config-server-svc
-    protocol: TCP
-    port: 80
-    targetPort: 9296
+    - protocol: TCP
+      port: 80
+      targetPort: 9296
 ---

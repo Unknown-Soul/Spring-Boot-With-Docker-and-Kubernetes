@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: eureka
-        image: udemycourse/serviceregistory
+        image: 123joker/serviceregistory:0.0.1
         ports:
         - containerPort: 8761
 ---
@@ -30,7 +30,7 @@ metadata:
   name: eureka
   namespace: default
 spec:
-  ClusterIP: None    # setting is none make it a healess service
+  clusterIP: None    # setting is none make it a healess service
   selector:
     app: eureka
   type: ClusterIP

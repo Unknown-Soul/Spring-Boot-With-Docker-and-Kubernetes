@@ -11,7 +11,6 @@ import com.springUdemyCourse.OrderService.helpers.OrderStatus;
 import com.springUdemyCourse.OrderService.model.Orders;
 import com.springUdemyCourse.OrderService.repository.OrderRepository;
 import lombok.extern.log4j.Log4j2;
-import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

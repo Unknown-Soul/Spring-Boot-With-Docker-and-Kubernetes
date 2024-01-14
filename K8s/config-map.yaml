@@ -11,8 +11,8 @@ data:
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: config-sm
+  name: config-cm
   namespace: default
 data:
-  config_url: "http://config-server-svc"  
+  config_url: "config-server-svc"  
 ---
